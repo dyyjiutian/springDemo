@@ -5,4 +5,8 @@ public class Core {
     public static String getHello() {
         return "Hello";
     }
+    public static void main(){
+       System.out.println("we");
+    }
+
 }
