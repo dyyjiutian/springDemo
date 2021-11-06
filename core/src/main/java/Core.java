@@ -7,6 +7,7 @@ public class Core {
     }
     public static void main(){
        System.out.println("we");
+       System.out.println("123");
     }
 
 }
