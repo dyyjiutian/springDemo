@@ -20,11 +20,12 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>aspectj-maven-plugin</artifactId>
-                <version>1.0-beta-2</version>
+                <version>1.14.0</version>
                 <configuration>
-                    <source>1.5</source>
+                    <source>1.8</source>
+                    <target>1.8</target>
                     <verbose>true</verbose>
-                    <complianceLevel>1.5</complianceLevel>
+                    <complianceLevel>1.8</complianceLevel>
                     <showWeaveInfo>true</showWeaveInfo>
                     <aspectLibraries>
                         <aspectLibrary>
@@ -134,6 +135,11 @@
             <groupId>org.appfuse</groupId>
             <artifactId>appfuse-${dao.framework}</artifactId>
             <version>${appfuse.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aspects</artifactId>
+            <version>${spring.version}</version>
         </dependency>
     </dependencies>
 </project>
