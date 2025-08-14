@@ -87,6 +87,7 @@
                     </dependentWarExcludes>
                 </configuration>
             </plugin>
+            <!-- Temporarily commented out due to unreachable AppFuse repository
             <plugin>
                 <groupId>org.appfuse</groupId>
                 <artifactId>maven-warpath-plugin</artifactId>
@@ -107,6 +108,8 @@
                     </warpathExcludes>
                 </configuration>
             </plugin>
+            -->
+            <!-- Temporarily commented out due to missing Sun's native2ascii tool
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>native2ascii-maven-plugin</artifactId>
@@ -148,6 +151,7 @@
                     </execution>
                 </executions>
             </plugin>
+            -->
         </plugins>
         <resources>
             <resource>
@@ -194,6 +198,7 @@
             <artifactId>springDemo-core</artifactId>
             <version>${pom.parent.version}</version>
         </dependency>
+        <!-- Temporarily commented out due to unreachable AppFuse repository
         <dependency>
             <groupId>org.appfuse</groupId>
             <artifactId>appfuse-${web.framework}</artifactId>
@@ -206,6 +211,7 @@
             <version>${appfuse.version}</version>
             <type>warpath</type>
         </dependency>
+        -->
         <!-- Dependencies with scope=provided aren't picked up from dependent JARs -->
         <dependency>
             <groupId>javax.servlet</groupId>

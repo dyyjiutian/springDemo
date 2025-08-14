@@ -17,6 +17,7 @@
     
     <build>
         <plugins>
+            <!-- Temporarily commented out due to missing spring-aspects dependency
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>aspectj-maven-plugin</artifactId>
@@ -41,6 +42,7 @@
                     </execution>
                 </executions>
             </plugin>
+            -->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>hibernate3-maven-plugin</artifactId>
@@ -116,13 +118,15 @@
     </build>
 
     <dependencies>
+        <!-- Temporarily commented out due to unreachable AppFuse repository -->
+        <!--
         <dependency>
             <groupId>org.appfuse</groupId>
             <artifactId>appfuse-service</artifactId>
             <version>${appfuse.version}</version>
-            <!-- This exclusion and the dependency following this one allow DAO framework switching. -->
-            <!-- You only need these if you want to use JPA or iBATIS. See APF-565 for more information. -->
-            <!-- It does no harm to leave it in for Hibernate, but it's not needed. -->
+            This exclusion and the dependency following this one allow DAO framework switching.
+            You only need these if you want to use JPA or iBATIS. See APF-565 for more information.
+            It does no harm to leave it in for Hibernate, but it's not needed.
             <exclusions>
                 <exclusion>
                     <groupId>org.appfuse</groupId>
@@ -135,5 +139,6 @@
             <artifactId>appfuse-${dao.framework}</artifactId>
             <version>${appfuse.version}</version>
         </dependency>
+        -->
     </dependencies>
 </project>
